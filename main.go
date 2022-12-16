@@ -11,14 +11,17 @@ import (
 )
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
+	errEnv := godotenv.Load()
+	if errEnv != nil {
 		log.Fatal("Error loading .env file")
 	}
 
 	app := fiber.New()
 
-	config.Connect()
+	_, errMg := config.Connect()
+	if errMg != nil {
+		log.Fatal("Mongo err")
+	}
 
 	routers.Init(app)
 	app.Listen(":" + os.Getenv("APP_PORT"))
