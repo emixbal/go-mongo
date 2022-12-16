@@ -29,7 +29,7 @@ func JamaahDelete(c *fiber.Ctx) error {
 
 	collection := db.Collection(models.JamaahCollectionName)
 
-	// find and delete the employee with the given ID
+	// find and delete the jamaah with the given ID
 	query := bson.D{{Key: "_id", Value: jamaahId}}
 	result, err := collection.DeleteOne(c.Context(), &query)
 
@@ -41,7 +41,7 @@ func JamaahDelete(c *fiber.Ctx) error {
 		return c.Status(res.Status).JSON(res)
 	}
 
-	// the employee might not exist
+	// the jamaah might not exist
 	if result.DeletedCount < 1 {
 		res.Status = http.StatusNotFound
 		res.Message = "Jamaah not found"

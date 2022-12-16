@@ -12,4 +12,5 @@ func Jamaah(router fiber.Router) {
 	r.Get("/", jamaahcontroller.JamaahList)
 	r.Post("/", jamaahcontroller.JamaahNew)
 	r.Delete("/:id", jamaahcontroller.JamaahDelete)
+	r.Get("/:uuid", jamaahcontroller.JamaahDetail)
 }
