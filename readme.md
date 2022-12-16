@@ -6,9 +6,9 @@ This boilerplate app is using Go version 1.17 because I think for now this is th
 pastikan pc anda sudah terinstall go, pda envoirement kami menggunakan go versi 1.17:
 
 ```
-$ git clone https://github.com/emixbal/fiber-gorm.git
+$ git clone https://github.com/emixbal/go-mongo.git
 
-$ cd fiber-gorm
+$ cd go-mongo
 
 $ go get
 ```
