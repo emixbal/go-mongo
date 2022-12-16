@@ -7,8 +7,8 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func Student(app *fiber.App) {
-	r := app.Group("/students")
+func Student(router fiber.Router) {
+	r := router.Group("/students")
 
 	r.Get("/", middlewares.ExampleMiddleware, controllers.StudentFind)
 	r.Get("/insert", middlewares.ExampleMiddleware, controllers.StudentInsert)

@@ -12,6 +12,8 @@ func Init(app *fiber.App) {
 		return c.SendString("/ path")
 	})
 
-	//palece new routers below
-	Student(app)
+	api := app.Group("/api")
+
+	// // palece new routers below
+	Student(api)
 }
