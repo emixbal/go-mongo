@@ -3,6 +3,8 @@ module go-mongo
 go 1.18
 
 require (
+	github.com/gookit/filter v1.1.4 // indirect
+	github.com/gookit/goutil v0.5.15 // indirect
 	github.com/mattn/go-runewidth v0.0.14 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 )
@@ -13,6 +15,7 @@ require (
 	github.com/gofiber/utils v1.0.1 // indirect
 	github.com/golang-jwt/jwt/v4 v4.4.3
 	github.com/golang/snappy v0.0.4 // indirect
+	github.com/gookit/validate v1.4.5
 	github.com/gorilla/schema v1.2.0 // indirect
 	github.com/joho/godotenv v1.4.0
 	github.com/klauspost/compress v1.15.13 // indirect
