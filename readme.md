@@ -1,4 +1,4 @@
-# Go Fiber Boilerplate with Gorm ORM
+# Go Fiber Boilerplate with Mongodb
 This boilerplate app is using Go version 1.17 because I think for now this is the most updated release. 
 
 ## Installation
@@ -21,7 +21,7 @@ $ go get
     ```
     $ go run main.go
     ```
-- pada client requester (mis:postman) buka alamat localhost:3000/books
+- pada client requester (mis:postman) buka alamat localhost:3000/students
 
 
 ## Run Production
