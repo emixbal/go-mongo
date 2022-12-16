@@ -13,7 +13,7 @@ func JamaahList(c *fiber.Ctx) error {
 
 	db, _ := config.Connect()
 
-	cursor, err := db.Collection(models.JamaahKey()).Find(c.Context(), bson.M{})
+	cursor, err := db.Collection(models.JamaahCollectionName).Find(c.Context(), bson.M{})
 
 	if err != nil {
 		panic(err)

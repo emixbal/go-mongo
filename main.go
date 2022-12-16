@@ -16,12 +16,12 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	app := fiber.New()
-
 	_, errMg := config.Connect()
 	if errMg != nil {
 		log.Fatal("Mongo err")
 	}
+
+	app := fiber.New()
 
 	routers.Init(app)
 	app.Listen(":" + os.Getenv("APP_PORT"))
