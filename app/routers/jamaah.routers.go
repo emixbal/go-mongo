@@ -11,6 +11,6 @@ func Jamaah(router fiber.Router) {
 	r := router.Group("/jamaah")
 
 	r.Get("/", middlewares.ExampleMiddleware, jamaahcontroller.JamaahList)
-	r.Post("/", middlewares.ExampleMiddleware, jamaahcontroller.JamaahList)
+	r.Post("/", middlewares.ExampleMiddleware, jamaahcontroller.JamaahNew)
 
 }
